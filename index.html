@@ -8,118 +8,126 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#fff8e7,#f4e3c1);
+    color:#333;
+    line-height:1.6;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #fff8e7, #f4e3c1);
-    color: #333;
-    line-height: 1.6;
+header{
+    background:rgba(255,193,7,0.95);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    z-index:1000;
 }
 
-header {
-    background: rgba(255, 193, 7, 0.9);
-    backdrop-filter: blur(6px);
-    padding: 20px 40px;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    z-index: 1000;
+header h1{
+    font-size:1.3rem;
+    color:#4e342e;
 }
 
-header h1 {
-    font-weight: 600;
-    color: #4e342e;
+.language-selector button{
+    background:white;
+    border:none;
+    padding:6px 12px;
+    margin-left:5px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:0.8rem;
+    transition:0.3s;
 }
 
-.hero {
-    height: 60vh;
-    background: url('https://images.unsplash.com/photo-1507041957456-9c397ce39c97') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
+.language-selector button:hover{
+    background:#6d4c41;
+    color:white;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
+.hero{
+    height:60vh;
+    background:url('https://images.unsplash.com/photo-1507041957456-9c397ce39c97') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.4);
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.hero-content{
+    position:relative;
+    z-index:1;
 }
 
-.section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+.hero h2{
+    font-size:2.4rem;
 }
 
-.section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #6d4c41;
+.section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+.section h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2rem;
+    color:#6d4c41;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-.highlight {
-    background: #fff3cd;
-    padding: 40px 20px;
-    border-radius: 20px;
-    margin-top: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
-footer {
-    background: #4e342e;
-    color: white;
-    text-align: center;
-    padding: 25px 10px;
-    margin-top: 50px;
+.highlight{
+    background:#fff3cd;
+    padding:40px 20px;
+    border-radius:20px;
+    margin-top:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-footer p {
-    font-size: 0.9rem;
+footer{
+    background:#4e342e;
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+    margin-top:50px;
 }
 
-@media (max-width: 768px) {
-    .hero h2 {
-        font-size: 1.8rem;
-    }
+@media(max-width:768px){
+    .hero h2{font-size:1.8rem;}
+    header{flex-direction:column;gap:10px;}
 }
 </style>
 </head>
@@ -127,61 +135,156 @@ footer p {
 <body>
 
 <header>
-    <h1>La Mel – Entre Torrent i Pals</h1>
+    <h1 id="siteTitle">La Mel – Entre Torrent i Pals</h1>
+    <div class="language-selector">
+        <button onclick="setLang('ca')">CA</button>
+        <button onclick="setLang('es')">ES</button>
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('fr')">FR</button>
+        <button onclick="setLang('it')">IT</button>
+    </div>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <h2>Apicultura tradicional i sostenible</h2>
-        <p>Passió per les abelles i respecte per la natura</p>
+        <h2 id="heroTitle"></h2>
+        <p id="heroSub"></p>
     </div>
 </section>
 
 <section class="section">
-    <h2>Qui som</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-        La Mel entre Torrent i Pals és un projecte apícola dedicat a la producció de mel natural 
-        mitjançant mètodes tradicionals i sostenibles. Situats a l’entorn privilegiat del Baix Empordà, 
-        treballem amb respecte per les abelles i pel medi ambient.
-    </p>
+    <h2 id="whoTitle"></h2>
+    <p id="whoText" style="text-align:center; max-width:800px; margin:auto;"></p>
 </section>
 
 <section class="section">
-    <h2>La nostra filosofia</h2>
+    <h2 id="philTitle"></h2>
     <div class="card-container">
         <div class="card">
-            <h3>Respecte per les abelles</h3>
-            <p>Prioritzem el benestar de les colònies i seguim pràctiques responsables que garanteixen la seva salut i continuïtat.</p>
+            <h3 id="card1Title"></h3>
+            <p id="card1Text"></p>
         </div>
         <div class="card">
-            <h3>Producció artesanal</h3>
-            <p>Extracció tradicional i processos mínims per conservar totes les propietats naturals de la mel.</p>
+            <h3 id="card2Title"></h3>
+            <p id="card2Text"></p>
         </div>
         <div class="card">
-            <h3>Sostenibilitat</h3>
-            <p>Compromís amb l’equilibri ambiental i la biodiversitat del territori entre Torrent i Pals.</p>
+            <h3 id="card3Title"></h3>
+            <p id="card3Text"></p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="highlight">
-        <h2>Què és la mel?</h2>
-        <p style="margin-top:15px;">
-            La mel és un aliment natural produït per les abelles a partir del nèctar de les flors. 
-            És rica en antioxidants, minerals i propietats antibacterianes. Des de l’antiguitat, 
-            ha estat valorada tant per la seva dolçor com pels seus beneficis nutricionals.
-        </p>
-        <p style="margin-top:15px;">
-            La qualitat de la mel depèn del territori, les flors predominants i el respecte en el procés d’extracció.
-            L’entorn natural entre Torrent i Pals aporta una riquesa floral que dóna caràcter propi al producte.
-        </p>
+        <h2 id="whatTitle"></h2>
+        <p id="whatText1" style="margin-top:15px;"></p>
+        <p id="whatText2" style="margin-top:15px;"></p>
     </div>
 </section>
 
 <footer>
-    <p>La Mel – Entre Torrent i Pals | Apicultura sostenible al Baix Empordà</p>
+    <p id="footerText"></p>
 </footer>
+
+<script>
+const translations = {
+ca:{
+heroTitle:"Apicultura tradicional i sostenible",
+heroSub:"Passió per les abelles i respecte per la natura",
+whoTitle:"Qui som",
+whoText:"Projecte apícola situat al Baix Empordà dedicat a la producció de mel natural amb mètodes tradicionals i sostenibles.",
+philTitle:"La nostra filosofia",
+card1Title:"Respecte per les abelles",
+card1Text:"Garantim el benestar de les colònies amb pràctiques responsables.",
+card2Title:"Producció artesanal",
+card2Text:"Extracció tradicional per conservar totes les propietats naturals.",
+card3Title:"Sostenibilitat",
+card3Text:"Compromís amb la biodiversitat entre Torrent i Pals.",
+whatTitle:"Què és la mel?",
+whatText1:"La mel és un aliment natural produït a partir del nèctar de les flors.",
+whatText2:"És rica en antioxidants i propietats antibacterianes.",
+footerText:"La Mel – Entre Torrent i Pals | Apicultura sostenible"
+},
+es:{
+heroTitle:"Apicultura tradicional y sostenible",
+heroSub:"Pasión por las abejas y respeto por la naturaleza",
+whoTitle:"Quiénes somos",
+whoText:"Proyecto apícola en el Baix Empordà dedicado a la producción de miel natural mediante métodos tradicionales y sostenibles.",
+philTitle:"Nuestra filosofía",
+card1Title:"Respeto por las abejas",
+card1Text:"Garantizamos el bienestar de las colonias.",
+card2Title:"Producción artesanal",
+card2Text:"Extracción tradicional para conservar sus propiedades.",
+card3Title:"Sostenibilidad",
+card3Text:"Compromiso con la biodiversidad local.",
+whatTitle:"¿Qué es la miel?",
+whatText1:"La miel es un alimento natural producido a partir del néctar.",
+whatText2:"Rica en antioxidantes y propiedades antibacterianas.",
+footerText:"La Mel – Entre Torrent i Pals | Apicultura sostenible"
+},
+en:{
+heroTitle:"Traditional and sustainable beekeeping",
+heroSub:"Passion for bees and respect for nature",
+whoTitle:"Who we are",
+whoText:"Beekeeping project in Baix Empordà producing natural honey using traditional methods.",
+philTitle:"Our philosophy",
+card1Title:"Respect for bees",
+card1Text:"We ensure colony welfare.",
+card2Title:"Artisanal production",
+card2Text:"Traditional extraction preserving natural properties.",
+card3Title:"Sustainability",
+card3Text:"Commitment to biodiversity.",
+whatTitle:"What is honey?",
+whatText1:"Honey is a natural food produced from flower nectar.",
+whatText2:"Rich in antioxidants and antibacterial properties.",
+footerText:"La Mel – Between Torrent and Pals"
+},
+fr:{
+heroTitle:"Apiculture traditionnelle et durable",
+heroSub:"Passion pour les abeilles et respect de la nature",
+whoTitle:"Qui sommes-nous",
+whoText:"Projet apicole au Baix Empordà produisant du miel naturel.",
+philTitle:"Notre philosophie",
+card1Title:"Respect des abeilles",
+card1Text:"Nous garantissons le bien-être des colonies.",
+card2Title:"Production artisanale",
+card2Text:"Extraction traditionnelle préservant les propriétés naturelles.",
+card3Title:"Durabilité",
+card3Text:"Engagement envers la biodiversité.",
+whatTitle:"Qu'est-ce que le miel ?",
+whatText1:"Le miel est un aliment naturel issu du nectar.",
+whatText2:"Riche en antioxydants et propriétés antibactériennes.",
+footerText:"La Mel – Entre Torrent et Pals"
+},
+it:{
+heroTitle:"Apicoltura tradizionale e sostenibile",
+heroSub:"Passione per le api e rispetto per la natura",
+whoTitle:"Chi siamo",
+whoText:"Progetto apistico nel Baix Empordà dedicato alla produzione di miele naturale.",
+philTitle:"La nostra filosofia",
+card1Title:"Rispetto per le api",
+card1Text:"Garantiamo il benessere delle colonie.",
+card2Title:"Produzione artigianale",
+card2Text:"Estrazione tradizionale che conserva le proprietà naturali.",
+card3Title:"Sostenibilità",
+card3Text:"Impegno per la biodiversità.",
+whatTitle:"Cos'è il miele?",
+whatText1:"Il miele è un alimento naturale prodotto dal nettare.",
+whatText2:"Ricco di antiossidanti e proprietà antibatteriche.",
+footerText:"La Mel – Tra Torrent e Pals"
+}
+};
+
+function setLang(lang){
+Object.keys(translations[lang]).forEach(id=>{
+document.getElementById(id).innerText = translations[lang][id];
+});
+}
+
+setLang('ca');
+</script>
 
 </body>
 </html>
+
