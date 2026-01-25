@@ -142,6 +142,8 @@ footer{
         <button onclick="setLang('en')">EN</button>
         <button onclick="setLang('fr')">FR</button>
         <button onclick="setLang('it')">IT</button>
+        <button onclick="setLang('de')">DE</button>
+        <button onclick="setLang('nl')">NL</button>
     </div>
 </header>
 
@@ -189,91 +191,14 @@ footer{
 
 <script>
 const translations = {
-ca:{
-heroTitle:"Apicultura tradicional i sostenible",
-heroSub:"Passió per les abelles i respecte per la natura",
-whoTitle:"Qui som",
-whoText:"Projecte apícola situat al Baix Empordà dedicat a la producció de mel natural amb mètodes tradicionals i sostenibles.",
-philTitle:"La nostra filosofia",
-card1Title:"Respecte per les abelles",
-card1Text:"Garantim el benestar de les colònies amb pràctiques responsables.",
-card2Title:"Producció artesanal",
-card2Text:"Extracció tradicional per conservar totes les propietats naturals.",
-card3Title:"Sostenibilitat",
-card3Text:"Compromís amb la biodiversitat entre Torrent i Pals.",
-whatTitle:"Què és la mel?",
-whatText1:"La mel és un aliment natural produït a partir del nèctar de les flors.",
-whatText2:"És rica en antioxidants i propietats antibacterianes.",
-footerText:"La Mel – Entre Torrent i Pals | Apicultura sostenible"
-},
-es:{
-heroTitle:"Apicultura tradicional y sostenible",
-heroSub:"Pasión por las abejas y respeto por la naturaleza",
-whoTitle:"Quiénes somos",
-whoText:"Proyecto apícola en el Baix Empordà dedicado a la producción de miel natural mediante métodos tradicionales y sostenibles.",
-philTitle:"Nuestra filosofía",
-card1Title:"Respeto por las abejas",
-card1Text:"Garantizamos el bienestar de las colonias.",
-card2Title:"Producción artesanal",
-card2Text:"Extracción tradicional para conservar sus propiedades.",
-card3Title:"Sostenibilidad",
-card3Text:"Compromiso con la biodiversidad local.",
-whatTitle:"¿Qué es la miel?",
-whatText1:"La miel es un alimento natural producido a partir del néctar.",
-whatText2:"Rica en antioxidantes y propiedades antibacterianas.",
-footerText:"La Mel – Entre Torrent i Pals | Apicultura sostenible"
-},
-en:{
-heroTitle:"Traditional and sustainable beekeeping",
-heroSub:"Passion for bees and respect for nature",
-whoTitle:"Who we are",
-whoText:"Beekeeping project in Baix Empordà producing natural honey using traditional methods.",
-philTitle:"Our philosophy",
-card1Title:"Respect for bees",
-card1Text:"We ensure colony welfare.",
-card2Title:"Artisanal production",
-card2Text:"Traditional extraction preserving natural properties.",
-card3Title:"Sustainability",
-card3Text:"Commitment to biodiversity.",
-whatTitle:"What is honey?",
-whatText1:"Honey is a natural food produced from flower nectar.",
-whatText2:"Rich in antioxidants and antibacterial properties.",
-footerText:"La Mel – Between Torrent and Pals"
-},
-fr:{
-heroTitle:"Apiculture traditionnelle et durable",
-heroSub:"Passion pour les abeilles et respect de la nature",
-whoTitle:"Qui sommes-nous",
-whoText:"Projet apicole au Baix Empordà produisant du miel naturel.",
-philTitle:"Notre philosophie",
-card1Title:"Respect des abeilles",
-card1Text:"Nous garantissons le bien-être des colonies.",
-card2Title:"Production artisanale",
-card2Text:"Extraction traditionnelle préservant les propriétés naturelles.",
-card3Title:"Durabilité",
-card3Text:"Engagement envers la biodiversité.",
-whatTitle:"Qu'est-ce que le miel ?",
-whatText1:"Le miel est un aliment naturel issu du nectar.",
-whatText2:"Riche en antioxydants et propriétés antibactériennes.",
-footerText:"La Mel – Entre Torrent et Pals"
-},
-it:{
-heroTitle:"Apicoltura tradizionale e sostenibile",
-heroSub:"Passione per le api e rispetto per la natura",
-whoTitle:"Chi siamo",
-whoText:"Progetto apistico nel Baix Empordà dedicato alla produzione di miele naturale.",
-philTitle:"La nostra filosofia",
-card1Title:"Rispetto per le api",
-card1Text:"Garantiamo il benessere delle colonie.",
-card2Title:"Produzione artigianale",
-card2Text:"Estrazione tradizionale che conserva le proprietà naturali.",
-card3Title:"Sostenibilità",
-card3Text:"Impegno per la biodiversità.",
-whatTitle:"Cos'è il miele?",
-whatText1:"Il miele è un alimento naturale prodotto dal nettare.",
-whatText2:"Ricco di antiossidanti e proprietà antibatteriche.",
-footerText:"La Mel – Tra Torrent e Pals"
-}
+/* --- (Mantinc exactament totes les traduccions ja definides abans) --- */
+ca:{heroTitle:"Apicultura tradicional i sostenible",heroSub:"Passió per les abelles i respecte per la natura",whoTitle:"Qui som",whoText:"Projecte apícola situat al Baix Empordà dedicat a la producció de mel natural amb mètodes tradicionals i sostenibles.",philTitle:"La nostra filosofia",card1Title:"Respecte per les abelles",card1Text:"Garantim el benestar de les colònies amb pràctiques responsables.",card2Title:"Producció artesanal",card2Text:"Extracció tradicional per conservar totes les propietats naturals.",card3Title:"Sostenibilitat",card3Text:"Compromís amb la biodiversitat entre Torrent i Pals.",whatTitle:"Què és la mel?",whatText1:"La mel és un aliment natural produït a partir del nèctar de les flors.",whatText2:"És rica en antioxidants i propietats antibacterianes.",footerText:"La Mel – Entre Torrent i Pals | Apicultura sostenible"},
+es:{heroTitle:"Apicultura tradicional y sostenible",heroSub:"Pasión por las abejas y respeto por la naturaleza",whoTitle:"Quiénes somos",whoText:"Proyecto apícola en el Baix Empordà dedicado a la producción de miel natural mediante métodos tradicionales y sostenibles.",philTitle:"Nuestra filosofía",card1Title:"Respeto por las abejas",card1Text:"Garantizamos el bienestar de las colonias.",card2Title:"Producción artesanal",card2Text:"Extracción tradicional para conservar sus propiedades.",card3Title:"Sostenibilidad",card3Text:"Compromiso con la biodiversidad local.",whatTitle:"¿Qué es la miel?",whatText1:"La miel es un alimento natural producido a partir del néctar.",whatText2:"Rica en antioxidantes y propiedades antibacterianas.",footerText:"La Mel – Entre Torrent i Pals | Apicultura sostenible"},
+en:{heroTitle:"Traditional and sustainable beekeeping",heroSub:"Passion for bees and respect for nature",whoTitle:"Who we are",whoText:"Beekeeping project in Baix Empordà producing natural honey using traditional methods.",philTitle:"Our philosophy",card1Title:"Respect for bees",card1Text:"We ensure colony welfare.",card2Title:"Artisanal production",card2Text:"Traditional extraction preserving natural properties.",card3Title:"Sustainability",card3Text:"Commitment to biodiversity.",whatTitle:"What is honey?",whatText1:"Honey is a natural food produced from flower nectar.",whatText2:"Rich in antioxidants and antibacterial properties.",footerText:"La Mel – Between Torrent and Pals"},
+fr:{heroTitle:"Apiculture traditionnelle et durable",heroSub:"Passion pour les abeilles et respect de la nature",whoTitle:"Qui sommes-nous",whoText:"Projet apicole au Baix Empordà produisant du miel naturel.",philTitle:"Notre philosophie",card1Title:"Respect des abeilles",card1Text:"Nous garantissons le bien-être des colonies.",card2Title:"Production artisanale",card2Text:"Extraction traditionnelle préservant les propriétés naturelles.",card3Title:"Durabilité",card3Text:"Engagement envers la biodiversité.",whatTitle:"Qu'est-ce que le miel ?",whatText1:"Le miel est un aliment naturel issu du nectar.",whatText2:"Riche en antioxydants et propriétés antibactériennes.",footerText:"La Mel – Entre Torrent et Pals"},
+it:{heroTitle:"Apicoltura tradizionale e sostenibile",heroSub:"Passione per le api e rispetto per la natura",whoTitle:"Chi siamo",whoText:"Progetto apistico nel Baix Empordà dedicato alla produzione di miele naturale.",philTitle:"La nostra filosofia",card1Title:"Rispetto per le api",card1Text:"Garantiamo il benessere delle colonie.",card2Title:"Produzione artigianale",card2Text:"Estrazione tradizionale che conserva le proprietà naturali.",card3Title:"Sostenibilità",card3Text:"Impegno per la biodiversità.",whatTitle:"Cos'è il miele?",whatText1:"Il miele è un alimento naturale prodotto dal nettare.",whatText2:"Ricco di antiossidanti e proprietà antibatteriche.",footerText:"La Mel – Tra Torrent e Pals"},
+de:{heroTitle:"Traditionelle und nachhaltige Imkerei",heroSub:"Leidenschaft für Bienen und Respekt vor der Natur",whoTitle:"Wer wir sind",whoText:"Imkereiprojekt im Baix Empordà zur Herstellung von natürlichem Honig mit traditionellen Methoden.",philTitle:"Unsere Philosophie",card1Title:"Respekt für Bienen",card1Text:"Wir gewährleisten das Wohl der Bienenvölker.",card2Title:"Handwerkliche Produktion",card2Text:"Traditionelle Gewinnung zur Erhaltung aller natürlichen Eigenschaften.",card3Title:"Nachhaltigkeit",card3Text:"Engagement für Biodiversität zwischen Torrent und Pals.",whatTitle:"Was ist Honig?",whatText1:"Honig ist ein natürliches Lebensmittel aus Blütennektar.",whatText2:"Reich an Antioxidantien und antibakteriellen Eigenschaften.",footerText:"La Mel – Zwischen Torrent und Pals"},
+nl:{heroTitle:"Traditionele en duurzame bijenteelt",heroSub:"Passie voor bijen en respect voor de natuur",whoTitle:"Wie wij zijn",whoText:"Bijenteeltproject in Baix Empordà dat natuurlijke honing produceert met traditionele methoden.",philTitle:"Onze filosofie",card1Title:"Respect voor bijen",card1Text:"Wij zorgen voor het welzijn van de bijenkolonies.",card2Title:"Ambachtelijke productie",card2Text:"Traditionele extractie met behoud van natuurlijke eigenschappen.",card3Title:"Duurzaamheid",card3Text:"Toewijding aan biodiversiteit tussen Torrent en Pals.",whatTitle:"Wat is honing?",whatText1:"Honing is een natuurlijk product gemaakt van bloemennectar.",whatText2:"Rijk aan antioxidanten en antibacteriële eigenschappen.",footerText:"La Mel – Tussen Torrent en Pals"}
 };
 
 function setLang(lang){
